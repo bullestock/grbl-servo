@@ -199,13 +199,8 @@ void spindle_stop()
         sys.spindle_speed = settings.rpm_max;
         pwm_value = SPINDLE_PWM_MAX_VALUE;
       } else if (rpm <= settings.rpm_min) {
-        if (rpm == 0.0) { // S0 disables spindle
-          sys.spindle_speed = 0.0;
-          pwm_value = SPINDLE_PWM_OFF_VALUE;
-        } else { // Set minimum PWM output
           sys.spindle_speed = settings.rpm_min;
           pwm_value = SPINDLE_PWM_MIN_VALUE;
-        }
       } else { 
         // Compute intermediate PWM value with linear spindle speed model.
         // NOTE: A nonlinear model could be installed here, if required, but keep it VERY light-weight.
