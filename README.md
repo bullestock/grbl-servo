@@ -2,7 +2,7 @@
 
 ***
 
-This fork is intended for use with a PWM servo connected to the Z-axis.
+_This is a special version with servo support (swichable in config.h)_
 
 - The PWM frequency is set to 62.5Hz (prescaler 1/1024)
 - The pulse width range is 0.63ms to 2.2ms
